@@ -1,0 +1,126 @@
+@import
+"https://fonts.googleapis.com/css?family=Share+Tech";
+
+html, body {
+  min-width: 290px;
+  line-height: 1.5;
+  background-color: #f8f8ff;
+  color: #232b2b;
+  overflow-x: hidden;
+}
+
+#navbar {
+  min-width: 290px;
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #232b2b;
+}
+
+#navbar > ul > li {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 15px;
+}
+
+@media screen and (max-width: 850px) {
+  
+  #navbar {
+    background-color: #f8f8ff;
+    position: absolute;
+    width: 100%;
+    max-height: 250px;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    border: none;
+  }
+  
+  code {
+    font-size: 12px !important;
+    left: 0;
+  }
+  
+  #nav-ul {
+    border: 4px solid #232b2b;
+  }
+  
+  #main-doc {
+    position: relative;
+    margin-left: 0 !important;
+    margin-top: 300px;
+  }
+}
+
+#navbar > header {
+  text-align: center;
+}
+
+header {
+  font-family: "Share Tech", serif;
+  color: black;
+  margin: 10px;
+  text-align: left;
+  font-size: 1.7rem;
+}
+
+#nav-ul {
+  height: 88%;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#nav-ul > li {
+  font-family: "Share Tech", serif;
+  border-top: 1px solid black;
+  list-style: none;
+  width: 100%;
+  position: relative;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px 30px;
+  font-size: 17px;
+  text-decoration: none;
+  color: #232b2b
+}
+
+.nav-link:hover {
+  color: #f8f8ff;
+  background-color: #232b2b;
+}
+
+#main-doc {
+  position: relative;
+  margin-left:  310px;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+section > article {
+  margin: 15px;
+  font-size: 1.1rem;
+}
+
+code {
+  background-color: #212121;
+  color: #f8f8ff;
+  display: inline-block;
+  white-space: pre;
+  font-weight: 700;
+  padding-left: 25px;
+  padding-right: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

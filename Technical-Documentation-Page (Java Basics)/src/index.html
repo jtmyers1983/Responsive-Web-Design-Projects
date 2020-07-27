@@ -1,0 +1,478 @@
+
+<nav id="navbar">
+  <header>Java Basics</header>
+  
+  <ul id="nav-ul">
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    
+    <li><a class="nav-link" href="#What_You_Should_Know">What You Should Know</a></li>
+    
+    <li><a class="nav-link" href="#Java_Features">Java Features</a></li>
+    
+    <li><a class="nav-link" href="#Hello_World_Program">Hello World Program</a></li>
+    
+    <li><a class="nav-link" href="#Objects_&_Classes">Objects & Classes</a></li>
+    
+    <li><a class="nav-link" href="#Data_Types">Data Types</a></li>
+    
+    <li><a class="nav-link" href="#Variables">Variables</a></li>
+    
+    <li><a class="nav-link" href="#Modifiers">Modifiers</a></li>
+    
+    <li><a class="nav-link" href="#Basic_Operators">Basic Operators</a></li>
+    
+    <li><a class="nav-link" href="#Loops">Loops</a></li>
+    
+    <li><a class="nav-link" href="#Decision_Making">Decision Making</a></li>
+           
+    <li><a class="nav-link" href="#Strings">Strings</a></li>
+  
+  <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+  
+  <li><a class="nav-link" href="#Methods">Methods</a></li>
+    
+  <li><a class="nav-link" href="#References">References</a></li>
+  </ul>
+</nav>
+
+
+<main id="main-doc">
+  <section class="main-section" id="Introduction"> 
+    <header>Introduction</header>
+    <article>
+      <p>Java is a high-level programming language, released in 1995 by Sun Microsystems.  The company has since been purchased by Oracle.  Java is an <b>Object Oriented programming language</b>, based on the concepts of <b>Inheritance, Polymorphism, and Encapsulation</b>.  These three concepts make up the foundation of <b>Core Java</b>. Those concepts are beyond the scope of this documentation, as this covers basic programming concepts utilizing Java. Please <a href="https://www.w3schools.com/java/java_oop.asp" target="_blank">click here</a> for further information regarding Java Object Oriented Programming</p>
+
+      <p>As mentioned above, Java is an <b>object oriented language</b>, meaning it can easily be extended because it is based on the object model.  Java programming is also based on the concept of <b><i>write once, run anywhere</i></b> (WORA) meaning it can run on many processors, and multiple platforms without the need to alter the source code.  This is because unlike languages like C and C++, which are compiled into platform specific machine code, Java code is compiled into <b><i>platform independent</i> byte code</b>.  This code is distributed on the web and interpreted by the <b>Java Virtual Machine</b> (JVM) on whichever platform it is running on.  It is also worth noting that Java is <b>architecture neutral</b>.  The Java compiler generates an architecture neutral file format.  This allows the code the be executable on many processors with the presence of the Java runtime system.</p>
+    </article>
+  </section>
+  
+  <section class="main-section" id="What_You_Should_Know">          
+    <header>What You Should Know</header>
+    <article>
+      <p>
+        This documentation assumes that you are already somewhat familiar with the following concepts: 
+      </p>
+      <ul>
+        <li>Basic Programming Concepts</li>
+        <li>You already have the Java Development Kit installed (if not please do so <a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank">here</a>)</li>
+      </ul>
+      The focus of this article is to be utilized by someone who is somewhat experienced with programming, and wishes to familiarize themselves with Java as a new language.  It is not intended to be a "ground up" programming course for beginners.
+    </article>
+  </section>
+  
+  <section class="main-section" id="Java_Features">
+    <header>Java Features</header>
+    <article>
+      <p>
+        Below is a list of notable features of Java:
+      </p>
+      <ul>
+        <li><b>Object Oriented</b> - Everything is an object in Java. Java can be esily extended because it is based on the object model.</li>
+        <li><b>Simple</b> - Java is designed to be easy to understand.  If you understand basic OOP concepts, you should be able to easily adapt to using Java.</li>
+        <li><b>High Performance</b> - Modern JVMs use a technique called "Just-in-Time" (JIT) compilation to compile the bytecode into native instructions on the fly at runtime, which can be understood by hardware CPU.</li>
+        <li><b>Platform Independent</b> - Java is compiled into platform independent bytecode, which is interpreted by the JVM on whichever platform it runs on.</li>
+      </ul>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Hello_World_Program">          
+    <header>Hello World Program</header>
+    <article>
+      <p>It is usually customary to start learning a new language by creating a Hello World program.  In this section we will simply create a program that prints "Hello World!" to the console. Take a look at the code block below:</p>
+      <pre><code>public class HelloWorld {
+	 public static void main(String[] args) {
+		System.out.print(“Hello World!”);
+	}
+}</code></pre>
+      <p>Next we will need to save, compile, and run the above code in order to see the output.</p>
+      <ul>
+        <li>Copy the above code and save the file as HelloWorld.java</li>
+        <li>Open a terminal, or command prompt, and go to the directory where you saved the HelloWorld.java file.</li>
+        <li>Type <b>javac HelloWorld.java</b> to compile your code.</li>
+        <li>Type <b>java HelloWorld</b> to run your code.  If there are no errors in your code, you should see the output shown below.  <pre><code>javac HelloWorld.java
+java HelloWorld
+Hello World</code></pre></li>
+      </ul>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Objects_&_Classes">          
+    <header>Objects & Classes</header>
+    <article><p>Java is an Object-Oriented language, and supports the following OOP fundamental concepts:</p>
+      <ul>
+        <li><b>Encapsulation</b> - in Java this refers to the process of wrapping data together into a single unit.  A fully encapsulated class can be created in Java by making all of the data members of the class private.</li>
+        <li><b>Inheritance</b> - in Java this is the process by which one class inherits the properties (fields and methods) of another class.  This is referred to as having a super class and sub class, or a parent and child class.</li>
+        <li><b>Polymorphism</b> - polymorphism means "many forms" and in Java it commonly occurs when many classes are related to each other through inheritance.  For instance you might have a superclass <i>Person</i> with a method <i>work()</i>.  Subclasses of Person could be Doctor, Lawyer, Programmer, Chef, Mechanic, Athlete, and so on.  All of the classes would have their own implementation of the method work().</li>
+      <li><b>Abstraction</b> - Data Abstraction refers to the process of hiding some details, and showing only essential information and data to users. In Java this can be achieved through the use of abstract classes, and interfaces.</li>
+      </ul>
+      <p><b>Objects</b> in Java represent data that has both <i>states and behaviors</i>.  For example a Person could have states like name, age, language.  A Person could also have behaviors like walk(), work(), eat(), sleep() and so on.</p> 
+      
+      <p><b>Classes</b> are a blueprint or template from which individual objects are created.  It is a way to bundle the fields and methods related to creating a specific object together.  Below is a simple example of a class.</p>
+      
+      <pre><code>Public class Person {
+	String name;
+	int age;
+	String language;
+
+	void eat() {
+	}
+	
+	void sleep() {
+	}
+
+	void walk() {
+	}
+
+	void work() {
+	}
+}</code></pre>
+      
+      <p>Classes can contain any of the following:</p>
+      <ul>
+        <li><b>Instance Variables</b> - variables inside a class, but outside of the class methods.  These are initialized when the class is instantiated.</li>
+        <li><b>Local Variables</b> - variables located inside of a method, constructor, or block of that particular class.</li>
+        <li><b>Class Variables</b> - these variables are declared inside a class, outside of an method, and utilize the <i>static</i> keyword.</li>
+      </ul>
+      
+      Another important sub-topic of classes are <b>Contructors</b>.  All classes have constructors.  If we do not explicitly write a constructor, then Java will build a default constructor for that class.  Every time a new object is created within a program, at least one constructor will be used.  A class can have more than one constructor.  A rule in Java is that the constructor must have the same name as the class.  Below is an example of using a constructor.
+    </article>
+    
+    <pre><code>public class Person {
+	String name;
+	int age;
+	String language;
+
+	public Person(String name, int age, String language) {	
+		this.name = name;
+		this.age = age;
+		this.language = language
+	}
+}</code></pre>
+    
+    <p>In this example we created a constructor which we can use to build an instance of the class Person, and assign values for name, age, and language.</p>
+  </section>
+  
+  <section class="main-section" id="Data_Types">          
+    <header>Data Types</header>
+    <article>
+      <p>Variables are used to represent reserved space in memory.  When you create a variable, you are actually creating a <i>reference</i> to a location in memory where you want to store the <i>value</i> of that variable.  Based on the type of data being stored, the operating system will allocate memory, and decide what can be stored there.  In Java there are two types of data. The Primitive Data types and Reference/Object Data types.</p>
+      <p><b>Primitive Data Types</b></p>
+      <p>There are eight primitive data types supported by Java, listed below.</p>
+      <p><b>byte</b>
+      <ul>
+        <li>8-bit signed two's compliment integer</li>
+        <li>Minimum value: -128 (-2^7) </li>
+        <li>Maximum value: 127 (2^7 - 1) inclusive</li>
+        <li>often used in place of an integer to save space in large arrays, because a byte is four times smaller than an integer.</li>
+      </ul></p>
+    
+    <p><b>short</b>
+      <ul>
+        <li>16-bit signed two's compliment integer</li>
+        <li>Minimum value: -32,768 (-2^15) </li>
+        <li>Maximum value: 32,767 (2^15 - 1) inclusive</li>
+        <li>often used in place of an integer to save space in large arrays, because a short is two times smaller than an integer.</li>
+      </ul></p>
+  
+  <p><b>int</b>
+      <ul>
+        <li>32-bit signed two's compliment integer</li>
+        <li>Minimum value: - 2,147,483,648 (-2^31) </li>
+        <li>Maximum value: 2,147,483,647 (2^31 - 1) inclusive</li>
+        <li>used often as default data type for integers unless memory space is a concern.</li>
+      </ul></p>
+
+<p><b>long</b>
+      <ul>
+        <li>64-bit signed two's compliment integer</li>
+        <li>Minimum value: -9,223,372,036,854,775,808(-2^63) </li>
+        <li>Maximum value: 9,223,372,036,854,775,807 (2^63 - 1) inclusive</li>
+        <li>used when greater range is needed than int can provide</li>
+      </ul></p>
+
+<p><b>float</b>
+      <ul>
+        <li>single-precision 32-bit IEEE 754 floating point</li>
+        <li>used to save memory in large arrays of floating point numbers.</li>
+        <li>float is never used for precise values</li>
+      </ul></p>
+
+<p><b>double</b>
+      <ul>
+        <li>double-precision 64-bit IEEE 754 floating point</li>
+        <li>generally used as the default for decimal values.</li>
+        <li>should never be used for precise values</li>
+      </ul></p>
+
+<p><b>boolean</b>
+      <ul>
+        <li>represents one bit of information</li>
+        <li>only has two possible values: true and false</li>
+        <li>used as a way to track values of true and false conditions.</li>
+        <li>default value is false.</li>
+      </ul></p>
+
+<p><b>char</b>
+      <ul>
+        <li>single 16-bit Unicode character</li>
+        <li>Minimum value: -'\u0000' (or 0) </li>
+        <li>Maximum value: '\uffff' (or 65,535) inclusive</li>
+      </ul></p>
+    <p><b>Reference Data Types</b> which are also referred to as non-primitive data types, are created using constructors.  They are used to reference objects.  Strings, arrays, and classes are all fall under reference data types. </p>
+
+<p><b>Java Literals</b> is a variable represented in source code with a fixed value.  These can be assigned any primitive data type.  For example: <pre><code>char a = ‘A’;
+int x = 15;
+boolean bool = true;</code></pre></p>
+<p>String literals can be expressed similar to other languages, by simply enclosing the string in double quotes, and assigning it to a variable. <pre><code>String hello = “Hello World!”;
+String myString = “This is a string literal”;</code></pre></p>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Variables">          
+    <header>Variables</header>
+    <article>
+      <p>Variables give us name storage which our programs can manipulate.  Variables in Java have a specific type, which determines the size and layout of the variable's memory, the range of values thay can be stores, and a set of operations that can be applied to it.  You must declare a variable before it can be used.  The basic form for declaring a variable in Java is as follows: <pre><code>[Data Type] [variable name] = [value];</code></pre>  Here "Data Type" represents one of Java's data types, "variable name" represents the name you choose to be associated with the location in memory where you want to store data, and "value" represents the data to be stored.  Below are a few examples of acceptable ways to declare variables in Java.  <pre><code>int x = 250;
+int a, b, c;
+int d = 10, e = 15, f = 20;
+double y = 3.216;
+char g = ‘G’;
+String bob = “Bob”;</code></pre></p>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Modifiers">          
+    <header>Modifiers</header>
+    <article>
+      <p>Modifiers are keywords that you add to definitions. The most commonly used modifiers are <i><b>Access Modifiers</b></i> and <i><b>Non-Access Modifiers</b></i>.  To use a modifier you must include the keyword at the beginning of the definition for the class, method, or variable being modified.</p>
+      <p><b>Access Modifiers</b><br>Java has access modifiers which can be used to set the access levels for classes, methods, and variables.  There are four types of access modifiers.  <ul>
+      <li><b>default</b> - visible to the package, and no modifier is needed.  This is the default if no modifier is provided.</li>
+      <li><b>public</b> - visible to everyone</li>
+      <li><b>private</b> - visible only to the class which contains it.</li>
+      <li><b>protected</b> - visible to the package, and all sub-classes.</li>
+      </ul>  Here is an example of using access modifiers: <pre><code>public class MyClass {
+	private int age;
+	protected boolean bool = true;
+
+	public void myMethod() {
+	}
+}</code></pre></p>
+    
+    <p><b>Non-Access Modifiers</b> <br> Java provides non-access modifiers to add functionality to classes, methods, and variables.  A few common non-access modifiers are: <ul><li><b>static</b> - The static modifier describes how an object is managed in memory.  It means that the static object belongs to the class, and not an instance of that class.  When there is a need for a variable to be common among all the instances of a class, then the static modifier should be used.</li>
+    <li><b>final</b> - the final modifier is commonly used to create a constant variable.  Once a variable is declared with the final keyword, it's value cannot be modified.</li>
+    <li><b>abstract</b> - the abstract modifier can only be applied to classes and methods, it cannot be applied to variables.  A class with the abstract modifier cannot itself be instantiated, but must be sub-classed.  A method with the abstract modifier means that it does not have an implementation in the class, but must be implemented in the subclass.</li>
+    <li><b>synchronized and volatile</b> - modifiers which are used for threads.</li>
+    </ul> An example of using non-access modifiers: <pre><code>private final int WIDTH = 163;
+
+public static void main(String[] args) {
+}
+
+public static final double pi = 3.14159;</code></pre></p>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Basic_Operators">          
+    <header>Basic Operators</header>
+    <article>
+      <p>Java provides a large number of operators that can be used to manipulate variables.  All of the operators in Java can be divided into the following groups:
+      <ul>
+        <li><b>Arithmetic Operators</b> - These operators are used for mathematical operations the same way they are used in Algebra.  An example of Arithmetic operators in Java: <pre><code>int x = 10;
+int y = 15;
+
+int sum = x + y;	// sum = 25
+int difference = y - x;	// difference = 5
+int product = x * y;	// product = 150</code></pre></li>
+        <li><b>Relational Operators</b> - These are used to evaluate the relationship between 2 variables.  For instance whether one variable is greater than or equal to another.  Below is a list of the Relational Operators in Java: 
+          <ul>
+            <li<b>>== (equal to)</b> - used to compare whether the values of two operands are equal. </li>
+        <li><b>!= (not equal to)</b> - used to compare whether the values of two operands are NOT equal
+</li>
+        <li><b>> (greater than)</b> - used to evaluate if the left operand is greater than the right
+</li>
+        <li><b>< (less than)</b> - used to evaluate if the left operand is less than the right</li>
+        <li><b>>= (greater than or equal to)</b> - used to evaluate if the left operand is greater than OR equal to the right</li>
+        <li><b><= (less than or equal to)</b> - used to evaluate if the left operand is less than OR equal to the right</li>
+          </ul></li>
+        <li><b>Bitwise Operators</b> - Java provides a number of bitwise operators.  They can be applied to the int, long, short, char, and byte data types.  Below is a list of the bitwise operators: <ul>
+          <li><b>& (bitwise AND)</b> - copies bit to the result if it exists in both operands.</li>
+          <li><b>| (bitwise OR)</b> - copies a bit to the result if it exists in either operand.</li>
+          <li><b>^ (bitwise XOR)</b> - copies bit if it exists in one operand but not the other.</li>
+          <li><b>~ (bitwise compliment)</b> - has the effect of 'flipping' bits</li>
+          <li><b><< (left shift)</b> - The left operands value is moved left by the number of bits specified by the right operand</li>
+          <li><b>>> (bitwise right shift)</b>The left operands value is moved right by the number of bits specified by the right operand.</li>
+          <li><b>>>> (zero fill right shift)</b> - The left operands value is moved right by the number of bits specified by the right operand and shifted values are filled up with zeros.</li>
+          </ul></li>
+    <li><b>Logical Operators</b> - Java has three logical operators: <b>&&</b> for AND, <b>||</b> for OR, and <b>!</b> for NOT, and they're meanings are similar to the English definitions. </li>
+        <li><b>Assignment Operators</b> - Following is a list of assignment operators offered by Java
+    <ul>
+      <li><b>=</b> simple operator to assign a value from the right side to the operand on the left.  int a = 15;</li>
+      <li><b>+=</b> - used to add a value from the right to the operand on the left AND assign its value. int a = 10; a += 10; (a now equals 20)</li>
+      <li><b>-=</b> - similar to +=, but uses substraction. int a = 10; a -= 10; (a now equals 0)</li>
+      <li><b>*=</b> - multiplies the value of the variable on the left with the value on the right and then assigns the product to the variable on the left. int a = 2; a *= 10; (a now equals 20)</li>
+      <li><b>/=</b> - It divides left operand with the right operand and assign the result to left operand. int a = 4; a /= 4;  (a now equals 1)</li>
+      <li><b>%=</b> - It takes modulus using two operands and assign the result to left operand</li>
+      <li><b><<=</b> - 	Left shift AND assignment operator</li>
+      <li><b>>>=</b> - Right shift AND assignment operator</li>
+      <li><b>&=</b> - Bitwise AND assignment operator.	</li>
+      <li><b>^=</b> - bitwise exclusive OR and assignment operator.	</li>
+      <li><b>|=</b> - bitwise inclusive OR and assignment operator.	</li>
+          </ul></li>
+        <li><b>Misc Operators</b> - there are a few other operators offered by Java as well.  One of the most common is the Conditional Operator, also known as the <b>Ternary Operator</b> and consists of (?:).  The operator is written as <pre><code>[variable] == [expression] ? value if true : value if false;
+</code></pre></li>
+      </ul></p>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Loops">          
+    <header>Loops</header>
+    <article><p>There are times when you might need a certain block of code to execute a number of times.  For instance imagine your program is a "Guess The Number Game", where players are asked to guess integers between 0 and 100 until they guess the right answer.  You're game will probably consist of having the program randomly choose a number between 0 and 100, and then having the player enter numbers in that range until the guess the correct answer.  Your program would <i>loop</i> through the process of: <ol><li>Guess a number</li>
+      <li>evaluate guess</li>
+      <li>Declare Winner OR Guess Again</li>
+      </ol></p>
+    To make this simple for a programmer, Java provised <i>Loop Control</i> features.  Below is a list of the types of loops available in Java:
+    <ul>
+      <li><b>while loop</b>Repeats a statement or group of statements until a condition is true.  The condition is tested before entering the loop. <pre><code>while (x < 5) {
+	System.out.println(x);
+	x += 1;
+}</code></pre></li>
+        <li><b>for loop</b> - executes a statement or group of statements multiple times, and abbreviates the code needed for the loop.  <pre><code>for (int x = 0; x < 10; x++;) {
+	System.out.println(“This is a loop”);
+}</code></pre></li>
+          <li><b>do-while loop</b> - similar to a while loop, except that it checks the condition at the end of the loop body.  <pre><code>int i = 0;
+
+do {
+	System.out.println(“This is a do while loop”);
+	i++;
+} while (i < 10);</code></pre></li>
+    </ul></article>
+  </section>
+  
+  <section class="main-section" id="Decision_Making">          
+    <header>Decision Making</header>
+    <article>
+      <p>Decision Making structures in Java consists of one or more conditions to be evaluated, along with a set of instructions that are to be executed is the condition is true.  Optionally you can also include instructions for if the statement is false.  Java provides the following types of decision making statements:
+      </p>
+      <ul>
+        <li><b>if statement</b> - an if statement consists of a boolean expression followed by one or more statements. <pre><code>int x = 2;
+int y = 4;
+
+if (x < y) {
+	print(“This statement is true”);
+}</code></pre></li>
+          <li><b>else statement</b> - an if statement can be followed by an optional else statement, which executes when the boolean expression is false.  <pre><code>int x = 2;
+int y = 4;
+
+if (x < y) {
+	System.out.println(“This condition x < y is true”);
+} else {
+	System.out.println(“This condition x < y is false”);
+}</code></pre></li>
+        <li><b>else if</b> - an else if statement allows additional options if the original if statement is false.  If statements are ALWAYS evaluated, even if the previous if statement is true.  On the other hand, and else if statement is only evaluated when the original if statement is false.  You can have as many else if statements as you want.  <pre><code>int number = 16;
+int guess = 32;
+
+if (number > guess) {
+	System.out.println(“Your guess is too low!);
+}
+
+else if (number < guess) {
+	System.out.println(“You’re guess is too high!”);
+}
+
+else {
+	System.out.println(“You guessed the number!”);
+}</code></pre></li>
+        <li><b>switch statement</b> - allows a variable to be tested against a list of values.  <pre><code>int age = 21;
+
+switch (user) {
+	case 18:
+		System.out.println(“You’re 18!”);
+		break;
+	case 19:
+		System.out.println(“You’re 19!”);
+		break;
+	case 20:
+		System.out.println(You’re 20!);
+		break;
+	case 21:
+		System.out.println(You’re 21!);
+		break;
+	default:
+		System.out.println(“I do not have a response for your age”);
+}</code></pre></li>
+      </ul>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Strings">          
+    <header>Strings</header>
+    <article>
+      <p>The String data type is extensively used in Java, and deserves it's own section beyond the scope of what was covered in the Data Types section.  Strings are a sequence of characters, and are treated as objects.  Java provides the String class to create and manipulate strings.</p>
+      
+      <p><b>Creating Strings</b>
+        <br>
+        The most direct way to create a string is by using a string literal.
+        <pre><code>String myString = "Hello";</code></pre>
+        Whenever a string literal is encountered in your code, the compiler will create a with it's value.  The String class has eleven constructors that allow you to provide the initial value of the string using different sources, such as an array of characters
+      </p>
+      <pre><code>char[] myArray = { ‘H’, ‘E’, ‘L’, ‘L’, ‘O’ };
+String hello = new String(myArray);
+System.out.println(hello);</code></pre>
+      <p>The above code will produce the output: "HELLO", because the String constructor allows you to pass a character array as an argument.  Strings are a very broad subject, and much more information on the methods supported by the String class can be found <a href="https://www.tutorialspoint.com/java/java_strings.htm">here</a></p>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Arrays">          
+    <header>Arrays</header>
+    <article>
+      <p>Arrays are a data structure provided by Java, that allows you to store fixed-size sequential collections of elements of the same data type.  Arrays are used to store collections of data, but it is much easier to think of them as a collection of variables of the same type.  In order to use an array, you must declare a variable to reference the array, and a type of array that the variable can reference.  Below is an example of how to declare an array in Java.</p>
+      <pre><code>int[] myArray;  // declare array
+myArray = new int[100];  // initialize array
+
+int[] myArray = new int[100]; // declare and initialize array at the same time</code></pre>
+      <p>The above code creates an array of type int that has a length of 100, meaning 100 seperate values can be stored, each with their own index.  Arrays are indexed starting at 0, so in the case of the array above, the index range is from 0 - 99.  This is not to be confused with the length of the array, which refers to the actual size.  The length of the array in this case is 100, and the highest index is 99.</p>
+      
+      <p>For processing an array, we normally will use a for loop or a foreach loop,  because the elements in the array are of the same type, and the size is known.  Here is an example of how to process an array with each.</p>
+      <pre><code>int[] myArray = {1, 2, 3, 4, 5};
+
+// iterates through the array and prints each element using a for loop
+
+for (int i = 0; i < myList.length; i++) {
+	System.out.println(myList[i] + “ “);
+}
+
+// iterates through the array and prints each element using a foreach loop
+
+for (int num : myArray) {
+	System.out.println(num);
+}</code></pre>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Methods">          
+    <header>Methods</header>
+    <article>
+      <p>In Java, a group of statements that are grouped together to perform an operation are known as <i>methods</i>.  Some languages will also refer to them as a function.  System.out.println() is an example of a Java method.  When you type System.out.println("Hello World!"); you are calling a Java method, that takes a String as an argument, and prints that string to the console.  Java has many built in methods, however you can also create your own.  Below is the basic format for creating a custom method and calling that method.</p>
+      <pre><code>public int myMethod(int a, int b) {
+	return a + b;
+}
+
+int x = myMethod(6, 12);</code></pre>
+      <p>In the above code, we are creating a method call myMethod.  If a method is to return something, you must specify the data type to be returned. In this case our method returns the sum of the two integers provided, so it is prefixed with int.  The method takes two arguments both of type int (methods can take in multple different data types, but can only return one).  It sums those numbers together using the addition operator, and returns the sum.  If a method does not return anything (for instance if a methods only purpose is to print something), then you should use <i>void</i> as the return type.  Here is an example of a method with the void return type.</p>
+      <pre><code>public void myMethod(String message) {
+	System.out.println(message);
+}</code></pre>
+      <p>As you can see, the method takes in a String, and then calls the System.out.println() method to print that string to the console.  It does not actually return anything, and so it uses the void return type.</p>
+    </article>
+  </section>
+  
+  <section class="main-section" id="References">          
+    <header>References</header>
+    <article>
+      <ul>
+        <li><a href="https://www.tutorialspoint.com/java/index.htm">tutorialspoint</a></li>
+        <li><a href="https://www.w3schools.com/java/">w3schools</a></li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+
